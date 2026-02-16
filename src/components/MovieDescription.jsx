@@ -2,8 +2,8 @@ import { useParams, useNavigate } from "react-router-dom";
 import { moviesData } from "../moviesData";
 
 const MovieDescription = () => {
-  const { id } = useParams(); // récupère l'id de l'URL
-  const navigate = useNavigate(); // pour retourner à l'accueil
+  const { id } = useParams(); 
+  const navigate = useNavigate(); 
 
   const movie = moviesData.find((m) => m.id === parseInt(id));
 
@@ -24,4 +24,11 @@ const MovieDescription = () => {
       ></iframe>
 
       <br /><br />
-      <button onClick={() => navigate("/")} style={{ padding: "10px 20px"
+      <button onClick={() => navigate("/")} style={{ padding: "10px 20px" }}>
+        Back to Home
+      </button>
+    </div>
+  );
+};
+
+export default MovieDescription;
